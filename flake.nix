@@ -36,7 +36,7 @@
             cp $src/hello.jl $out/bin/
             
             # Create wrapper
-            makeWrapper ${pkgs.julia}/bin/julia $out/bin/hello-julia \
+            makeWrapper ${pkgs.julia-bin}/bin/julia $out/bin/hello-julia \
               --set JULIA_DEPOT_PATH "$JULIA_DEPOT_PATH" \
               --set JULIA_PROJECT "$src" \
               --add-flags "$out/bin/hello.jl"
