@@ -16,7 +16,7 @@
           name = "julia-hello";
           src = ./src;
           
-          nativeBuildInputs = [ pkgs.makeWrapper pkgs.julia ];
+          nativeBuildInputs = [ pkgs.makeWrapper pkgs.julia-bin ];
           
           # Install phase: create the Julia depot and install dependencies
           installPhase = ''
@@ -54,7 +54,7 @@
 
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.julia
+            pkgs.julia-bin
           ];
           
           shellHook = ''
